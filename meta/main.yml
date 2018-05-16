@@ -1,0 +1,15 @@
+galaxy_info:
+  author: choijero
+  company: KSTEC
+
+  min_ansible_version: 2.0
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - Xenial
+
+  galaxy_tags:
+    - sencha
+    - senchaCMD
+    - extjs
