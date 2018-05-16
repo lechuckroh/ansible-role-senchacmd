@@ -20,7 +20,7 @@ $ansible-galaxy install choijero.sencha_cmd_installer
       hosts: all
       become: true
       roles:
-        - sencha_cmd_installer
+        - choijero.sencha_cmd_installer
 
 
 Author Information
