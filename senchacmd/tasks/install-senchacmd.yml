@@ -1,0 +1,27 @@
+---
+# tasks file for install sencha CMD
+- name: Create sencha cmd installer directory
+  file:
+    path: "{{ senchacmd_tmp_dir }}"
+    state: directory
+
+- name: install unzip
+  apt: 
+    name: unzip
+
+- name: Download sencha cmd installer
+  unarchive:
+    remote_src: yes
+    src: "{{ senchacmd_download_url }}"
+    dest: "{{ senchacmd_tmp_dir }}"
+
+- name: Rename installer
+  shell: "mv {{ senchacmd_tmp_dir }}/*.sh {{ senchacmd_tmp_dir }}/installer.sh"
+
+- name: Install sencha cmd
+  shell: "{{ senchacmd_tmp_dir }}/installer.sh -q -dir {{ senchacmd_install_dir }}/{{ senchacmd_version }}"
+
+- name: Delete sencha cmd installer
+  file:
+    path: "{{ senchacmd_tmp_dir }}"
+    state: absent
