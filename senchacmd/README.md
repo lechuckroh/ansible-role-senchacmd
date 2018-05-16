@@ -9,8 +9,8 @@ Ubuntu target server
 Role Variables
 --------------
 
-- senchacmd/defaults/main.yml
-senchacmd_version
+senchacmd/defaults/main.yml
+  - senchacmd_version
 
 Example Playbook
 ----------------
