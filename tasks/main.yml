@@ -1,8 +1,5 @@
 ---
 # tasks file for senchacmd
-#- set_fact:
-    #senchacmd_version: "{{ senchacmd_download_url | regex_search('\\d\\.\\d\\.\\d\\.\\d') }}"
-
 - name: Check if sencha cmd is installed.
   shell: "{{ senchacmd_install_dir }}/{{ senchacmd_version }}/sencha"
   register: sencha_result
