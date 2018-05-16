@@ -14,12 +14,13 @@ senchacmd/defaults/main.yml
 
 Example Playbook
 ----------------
+$ansible-galaxy install choijero.sencha_cmd_installer
 
     - name: sencha cmd
       hosts: all
       become: true
       roles:
-        - senchacmd
+        - sencha_cmd_installer
 
 
 Author Information
