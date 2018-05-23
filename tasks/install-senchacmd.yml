@@ -1,13 +1,18 @@
 ---
 # tasks file for install sencha CMD
+- name: install jdk
+  import_role:
+    name: lechuckroh.java
+
 - name: Create sencha cmd installer directory
   file:
     path: "{{ senchacmd_tmp_dir }}"
     state: directory
 
 - name: install unzip
-  apt: 
+  package: 
     name: unzip
+    state: present
 
 - name: Download sencha cmd installer
   unarchive:

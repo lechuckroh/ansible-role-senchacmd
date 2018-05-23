@@ -2,4 +2,4 @@
 # vars file for senchacmd
 senchacmd_download_url: http://cdn.sencha.com/cmd/{{senchacmd_version}}/no-jre/SenchaCmd-{{senchacmd_version}}-linux-amd64.sh.zip
 senchacmd_install_dir: /opt/Sencha/Cmd
-senchacmd_tmp_dir: /tmp/senchacmd/
+senchacmd_tmp_dir: /tmp/senchacmd
