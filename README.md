@@ -1,30 +1,36 @@
-Ansible role: Sencha CMD installer
-=========
+# Ansible role `sencha-cmd`
 
-Requirements
-------------
+An ansible role for sencha-cmd
 
-Ubuntu target server
+Tested under:
+* CentOS 7.4
 
-Role Variables
---------------
+## Requirements
 
-senchacmd/defaults/main.yml
-  - senchacmd_version: "6.5.3.6" (default)
+No requirements
 
-Example Playbook
-----------------
-$ansible-galaxy install choijero.sencha_cmd_installer
+## Role Variables
 
-    - name: sencha cmd
-      hosts: all
-      become: true
-      vars:
-        senchacmd_version: "6.2.2" (optional)
-      roles:
-        - choijero.sencha_cmd_installer
+| Variable               | Default                 | Comments                   |
+|:-----------------------|:------------------------|:---------------------------|
+| `senchacmd_version`    | `6.5.3.6`               | sencha-cmd version         |
 
+## Dependencies
 
-Author Information
-------------------
-choijae0@gmail.com
+No dependencies
+
+## Example Playbook
+
+```yaml
+---
+- name: example
+  hosts: all
+  become: true
+  vars:
+    senchacmd_version: 6.5.3.6
+  roles:
+  - lechuckroh.senchacmd
+```
+
+## License
+MIT

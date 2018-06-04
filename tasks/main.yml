@@ -9,6 +9,12 @@
 - set_fact:
     sencha_installed: "{{ sencha_result.rc == 0 }}"
 
-- name: install sencha CMD tasks
-  include_tasks: install-senchacmd.yml
+- name: install sencha-cmd
+  include_tasks: install.yml
   when: sencha_installed != true
+
+- name: Set repo directory permission
+  file:
+    path: "{{ senchacmd_install_dir }}/repo"
+    state: directory
+    mode: 0777

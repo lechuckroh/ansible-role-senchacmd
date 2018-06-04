@@ -1,20 +1,22 @@
 galaxy_info:
-  author: choijero
-  company: KSTEC
-
+  author: Lechuck Roh
+  description: Install sencha-cmd
+  license: MIT
   min_ansible_version: 2.0
-
   platforms:
-  - name: Ubuntu
-    versions:
-      - xenial
   - name: EL
     versions:
-      - 7
-  
-  license: license (BSD)
+    - all
+  - name: Fedora
+    versions:
+    - 25
+  - name: Ubuntu
+    versions:
+    - all
 
   galaxy_tags:
-    - sencha
-    - senchaCMD
+    - development
     - extjs
+    - sencha
+
+dependencies: []
