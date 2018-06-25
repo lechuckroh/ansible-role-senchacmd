@@ -13,7 +13,7 @@ No requirements
 
 | Variable               | Default                 | Comments                   |
 |:-----------------------|:------------------------|:---------------------------|
-| `senchacmd_version`    | `6.5.3.6`               | sencha-cmd version         |
+| `senchacmd_version`    | `6.6.0.13`               | sencha-cmd version         |
 
 ## Dependencies
 
@@ -27,7 +27,7 @@ No dependencies
   hosts: all
   become: true
   vars:
-    senchacmd_version: 6.5.3.6
+    senchacmd_version: 6.6.0.13
   roles:
   - lechuckroh.senchacmd
 ```
